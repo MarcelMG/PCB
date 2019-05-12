@@ -1,0 +1,411 @@
+EESchema Schematic File Version 4
+LIBS:SPI_Flash_and_DAC-cache
+EELAYER 26 0
+EELAYER END
+$Descr User 11811 4016
+encoding utf-8
+Sheet 1 1
+Title "SPI Flash and DAC Breakout Board"
+Date "9.2.2019"
+Rev "1"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L W25Q64JV:W25Q64JV U1
+U 1 1 5C5EF999
+P 3700 2000
+F 0 "U1" H 3300 2400 50  0000 C CNN
+F 1 "W25Q64JV" H 4050 1550 50  0000 C CNN
+F 2 "Package_SO:SOIJ-8_5.3x5.3mm_P1.27mm" H 4500 2100 50  0001 C CNN
+F 3 "http://www.winbond.com/resource-files/w25q64jv%20revj%2003272018%20plus.pdf" H 3850 1900 50  0001 C CNN
+	1    3700 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Analog_DAC:MCP4911 U2
+U 1 1 5C5EFADB
+P 7350 1400
+F 0 "U2" H 7800 1800 50  0000 L CNN
+F 1 "MCP4911" H 7800 1700 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8350 1300 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/22248a.pdf" H 8350 1300 50  0001 C CNN
+	1    7350 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5C5EFBC0
+P 3700 2500
+F 0 "#PWR04" H 3700 2250 50  0001 C CNN
+F 1 "GND" H 3705 2327 50  0000 C CNN
+F 2 "" H 3700 2500 50  0001 C CNN
+F 3 "" H 3700 2500 50  0001 C CNN
+	1    3700 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDA #PWR09
+U 1 1 5C5EFCE3
+P 7350 1800
+F 0 "#PWR09" H 7350 1550 50  0001 C CNN
+F 1 "GNDA" H 7355 1627 50  0000 C CNN
+F 2 "" H 7350 1800 50  0001 C CNN
+F 3 "" H 7350 1800 50  0001 C CNN
+	1    7350 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR03
+U 1 1 5C5EFD6A
+P 3700 1500
+F 0 "#PWR03" H 3700 1350 50  0001 C CNN
+F 1 "VCC" H 3717 1673 50  0000 C CNN
+F 2 "" H 3700 1500 50  0001 C CNN
+F 3 "" H 3700 1500 50  0001 C CNN
+	1    3700 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDDA #PWR08
+U 1 1 5C5EFE78
+P 7350 1000
+F 0 "#PWR08" H 7350 850 50  0001 C CNN
+F 1 "VDDA" H 7367 1173 50  0000 C CNN
+F 2 "" H 7350 1000 50  0001 C CNN
+F 3 "" H 7350 1000 50  0001 C CNN
+	1    7350 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper JP3
+U 1 1 5C5EFF37
+P 6450 1600
+F 0 "JP3" V 6400 1900 50  0000 R CNN
+F 1 "Jumper" V 6500 2000 50  0000 R CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 6450 1600 50  0001 C CNN
+F 3 "~" H 6450 1600 50  0001 C CNN
+	1    6450 1600
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	6450 1300 6950 1300
+$Comp
+L power:GNDA #PWR07
+U 1 1 5C5F0174
+P 6450 1900
+F 0 "#PWR07" H 6450 1650 50  0001 C CNN
+F 1 "GNDA" H 6455 1727 50  0000 C CNN
+F 2 "" H 6450 1900 50  0001 C CNN
+F 3 "" H 6450 1900 50  0001 C CNN
+	1    6450 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male J3
+U 1 1 5C5F021D
+P 9850 1250
+F 0 "J3" H 9823 1130 50  0000 R CNN
+F 1 "Conn_01x04_Male" H 9823 1221 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 9850 1250 50  0001 C CNN
+F 3 "~" H 9850 1250 50  0001 C CNN
+	1    9850 1250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J4
+U 1 1 5C5F04C7
+P 9850 1700
+F 0 "J4" H 9823 1630 50  0000 R CNN
+F 1 "Conn_01x03_Male" H 9823 1721 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 9850 1700 50  0001 C CNN
+F 3 "~" H 9850 1700 50  0001 C CNN
+	1    9850 1700
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VDDA #PWR012
+U 1 1 5C5F0565
+P 9650 1050
+F 0 "#PWR012" H 9650 900 50  0001 C CNN
+F 1 "VDDA" V 9668 1178 50  0000 L CNN
+F 2 "" H 9650 1050 50  0001 C CNN
+F 3 "" H 9650 1050 50  0001 C CNN
+	1    9650 1050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GNDA #PWR013
+U 1 1 5C5F0589
+P 9650 1350
+F 0 "#PWR013" H 9650 1100 50  0001 C CNN
+F 1 "GNDA" H 9655 1177 50  0000 C CNN
+F 2 "" H 9650 1350 50  0001 C CNN
+F 3 "" H 9650 1350 50  0001 C CNN
+	1    9650 1350
+	1    0    0    -1  
+$EndComp
+Text GLabel 7550 1000 1    50   Input ~ 0
+Vref
+Text GLabel 9650 1250 0    50   Input ~ 0
+Vref
+Text GLabel 9650 1600 0    50   Input ~ 0
+CS_
+Text GLabel 6950 1400 0    50   Input ~ 0
+CS_
+Text GLabel 6950 1500 0    50   Input ~ 0
+CLK_
+Text GLabel 6950 1600 0    50   Input ~ 0
+MOSI_
+Text GLabel 9650 1700 0    50   Input ~ 0
+CLK_
+Text GLabel 9650 1800 0    50   Input ~ 0
+MOSI_
+Text GLabel 9650 1150 0    50   Input ~ 0
+Vout
+Text GLabel 8050 1400 2    50   Input ~ 0
+Vout
+$Comp
+L Connector:Conn_01x03_Male J1
+U 1 1 5C5F096F
+P 1800 1900
+F 0 "J1" H 1750 2100 50  0000 C CNN
+F 1 "Conn_01x03_Male" H 1400 2000 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1800 1900 50  0001 C CNN
+F 3 "~" H 1800 1900 50  0001 C CNN
+	1    1800 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J2
+U 1 1 5C5F0AE3
+P 1850 2550
+F 0 "J2" H 1800 2700 50  0000 C CNN
+F 1 "Conn_01x03_Male" H 1650 2350 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1850 2550 50  0001 C CNN
+F 3 "~" H 1850 2550 50  0001 C CNN
+	1    1850 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR01
+U 1 1 5C5F0B5D
+P 2000 1800
+F 0 "#PWR01" H 2000 1650 50  0001 C CNN
+F 1 "VCC" H 2017 1973 50  0000 C CNN
+F 2 "" H 2000 1800 50  0001 C CNN
+F 3 "" H 2000 1800 50  0001 C CNN
+	1    2000 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5C5F0C7A
+P 2000 2000
+F 0 "#PWR02" H 2000 1750 50  0001 C CNN
+F 1 "GND" H 2005 1827 50  0000 C CNN
+F 2 "" H 2000 2000 50  0001 C CNN
+F 3 "" H 2000 2000 50  0001 C CNN
+	1    2000 2000
+	1    0    0    -1  
+$EndComp
+Text GLabel 4300 1900 2    50   Input ~ 0
+CS
+Text GLabel 2000 1900 2    50   Input ~ 0
+CS
+Text GLabel 4300 1750 2    50   Input ~ 0
+MISO
+Text GLabel 2050 2450 2    50   Input ~ 0
+MISO
+Text GLabel 4300 2050 2    50   Input ~ 0
+MOSI
+Text GLabel 2050 2550 2    50   Input ~ 0
+MOSI
+Text GLabel 4300 2200 2    50   Input ~ 0
+CLK
+Text GLabel 2050 2650 2    50   Input ~ 0
+CLK
+$Comp
+L Device:Jumper JP2
+U 1 1 5C5F0EF6
+P 3000 1800
+F 0 "JP2" V 2900 1700 50  0000 R CNN
+F 1 "Jumper" V 3050 1700 50  0000 R CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 3000 1800 50  0001 C CNN
+F 3 "~" H 3000 1800 50  0001 C CNN
+	1    3000 1800
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:Jumper JP1
+U 1 1 5C5F0F7C
+P 2850 1800
+F 0 "JP1" V 2800 2100 50  0000 R CNN
+F 1 "Jumper" V 2900 2200 50  0000 R CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 2850 1800 50  0001 C CNN
+F 3 "~" H 2850 1800 50  0001 C CNN
+	1    2850 1800
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	2850 2100 2850 2200
+Wire Wire Line
+	2850 2200 3100 2200
+Wire Wire Line
+	3100 2100 3000 2100
+Wire Wire Line
+	2850 1500 3000 1500
+Wire Wire Line
+	3700 1500 3300 1500
+Connection ~ 3700 1500
+Connection ~ 3000 1500
+$Comp
+L power:VCC #PWR05
+U 1 1 5C5F131F
+P 4700 1850
+F 0 "#PWR05" H 4700 1700 50  0001 C CNN
+F 1 "VCC" H 4717 2023 50  0000 C CNN
+F 2 "" H 4700 1850 50  0001 C CNN
+F 3 "" H 4700 1850 50  0001 C CNN
+	1    4700 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5C5F133C
+P 4700 2150
+F 0 "#PWR06" H 4700 1900 50  0001 C CNN
+F 1 "GND" H 4705 1977 50  0000 C CNN
+F 2 "" H 4700 2150 50  0001 C CNN
+F 3 "" H 4700 2150 50  0001 C CNN
+	1    4700 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5C5F139C
+P 4700 2000
+F 0 "C1" H 4815 2046 50  0000 L CNN
+F 1 "100n" H 4815 1955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4738 1850 50  0001 C CNN
+F 3 "~" H 4700 2000 50  0001 C CNN
+	1    4700 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5C5F16E4
+P 8550 1400
+F 0 "C2" H 8665 1446 50  0000 L CNN
+F 1 "100n" H 8600 1300 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8588 1250 50  0001 C CNN
+F 3 "~" H 8550 1400 50  0001 C CNN
+	1    8550 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5C5F1797
+P 8900 1400
+F 0 "C3" H 9015 1446 50  0000 L CNN
+F 1 "100n" H 8950 1300 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8938 1250 50  0001 C CNN
+F 3 "~" H 8900 1400 50  0001 C CNN
+	1    8900 1400
+	1    0    0    -1  
+$EndComp
+Text GLabel 8550 1250 1    50   Input ~ 0
+Vref
+$Comp
+L power:VDDA #PWR011
+U 1 1 5C5F19BB
+P 8900 1250
+F 0 "#PWR011" H 8900 1100 50  0001 C CNN
+F 1 "VDDA" H 8917 1423 50  0000 C CNN
+F 2 "" H 8900 1250 50  0001 C CNN
+F 3 "" H 8900 1250 50  0001 C CNN
+	1    8900 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDA #PWR010
+U 1 1 5C5F19EA
+P 8550 1650
+F 0 "#PWR010" H 8550 1400 50  0001 C CNN
+F 1 "GNDA" H 8555 1477 50  0000 C CNN
+F 2 "" H 8550 1650 50  0001 C CNN
+F 3 "" H 8550 1650 50  0001 C CNN
+	1    8550 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 1550 8550 1650
+Wire Wire Line
+	8550 1550 8900 1550
+Connection ~ 8550 1550
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5C5F06CB
+P 3300 1500
+F 0 "#FLG0101" H 3300 1575 50  0001 C CNN
+F 1 "PWR_FLAG" H 3300 1674 50  0000 C CNN
+F 2 "" H 3300 1500 50  0001 C CNN
+F 3 "~" H 3300 1500 50  0001 C CNN
+	1    3300 1500
+	1    0    0    -1  
+$EndComp
+Connection ~ 3300 1500
+Wire Wire Line
+	3300 1500 3000 1500
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5C5F0733
+P 3700 2500
+F 0 "#FLG0102" H 3700 2575 50  0001 C CNN
+F 1 "PWR_FLAG" V 3700 2628 50  0000 L CNN
+F 2 "" H 3700 2500 50  0001 C CNN
+F 3 "~" H 3700 2500 50  0001 C CNN
+	1    3700 2500
+	0    -1   -1   0   
+$EndComp
+Connection ~ 3700 2500
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5C5F09B3
+P 7350 1000
+F 0 "#FLG0103" H 7350 1075 50  0001 C CNN
+F 1 "PWR_FLAG" V 7350 1128 50  0000 L CNN
+F 2 "" H 7350 1000 50  0001 C CNN
+F 3 "~" H 7350 1000 50  0001 C CNN
+	1    7350 1000
+	0    -1   -1   0   
+$EndComp
+Connection ~ 7350 1000
+$Comp
+L power:PWR_FLAG #FLG0104
+U 1 1 5C5F0A2A
+P 7550 1000
+F 0 "#FLG0104" H 7550 1075 50  0001 C CNN
+F 1 "PWR_FLAG" V 7550 1128 50  0000 L CNN
+F 2 "" H 7550 1000 50  0001 C CNN
+F 3 "~" H 7550 1000 50  0001 C CNN
+	1    7550 1000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0106
+U 1 1 5C5F0B7E
+P 8550 1550
+F 0 "#FLG0106" H 8550 1625 50  0001 C CNN
+F 1 "PWR_FLAG" V 8550 1678 50  0000 L CNN
+F 2 "" H 8550 1550 50  0001 C CNN
+F 3 "~" H 8550 1550 50  0001 C CNN
+	1    8550 1550
+	0    -1   -1   0   
+$EndComp
+Text Notes 7200 2800 0    79   ~ 0
+Two Breakout-Boards, one for the W25Q64JV SPI Flash memory\nand another for the MCP49x1 DAC. Both are on one PCB\nthat can be broken in half to separate them.\ncreated by Marcel Meyer-Garcia
+$EndSCHEMATC
